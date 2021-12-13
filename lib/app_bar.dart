@@ -5,6 +5,7 @@ import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutx/flutx.dart';
 import 'package:mail_module/body/container.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'send_mesagge.dart';
 
 class SearchBar extends StatefulWidget {
   @override
@@ -19,17 +20,21 @@ class _SearchBar extends State<SearchBar> {
   Widget build(BuildContext context) {
     return Scaffold(
         floatingActionButton: FloatingActionButton(
-          backgroundColor: Colors.green,
+          backgroundColor: Color(0xFF0760b2),
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.of(context).push(new MaterialPageRoute<Null>(
+                builder: (BuildContext context) {
+                  return SendMessage();
+                },
+                fullscreenDialog: true));
           },
-          child: Icon(FeatherIcons.home),
+          child: Icon(FeatherIcons.penTool),
         ),
         body: Container(
           //height: 200.0,
           decoration: const BoxDecoration(
               gradient: LinearGradient(
-                  colors: [Color(0xFF4268D3), Color(0xFF584CD1)])),
+                  colors: [Color(0xFF0760b2), Color(0xFF081159)])),
           key: _scaffoldKey,
           //Llave para identificar elementos
           child: Stack(
@@ -46,25 +51,31 @@ class _SearchBar extends State<SearchBar> {
                         child: ListView(
                           children: <Widget>[
                             mailContainer("assets/img/thedo.jpg", "#EXTERNAL",
-                                "Información muy importante"),
+                                "Información muy importante", "12-dic"),
                             mailContainer("assets/img/kerokerobonito.jpg",
-                                "EXTERNAL", "Importante"),
+                                "EXTERNAL", "Importante", "12-dic"),
                             mailContainer("assets/img/frankiecosmos.jpg",
-                                "EXTERNAL", "Importante"),
+                                "EXTERNAL", "Importante", "12-dic"),
                             mailContainer("assets/img/alvvays.jpg", "EXTERNAL",
-                                "Información muy importante"),
+                                "Información muy importante", "12-dic"),
                             mailContainer("assets/img/bjork.jpg", "EXTERNAL",
-                                "Información muy importante"),
+                                "Información muy importante", "12-dic"),
                             mailContainer("assets/img/blink182.jpg", "EXTERNAL",
-                                "Información muy importante"),
+                                "Información muy importante", "12-dic"),
                             mailContainer("assets/img/crumb.jpg", "EXTERNAL",
-                                "Información muy importante"),
-                            mailContainer("assets/img/ghostemane.jpg",
-                                "EXTERNAL", "Información muy importante"),
+                                "Información muy importante", "12-dic"),
+                            mailContainer(
+                                "assets/img/ghostemane.jpg",
+                                "EXTERNAL",
+                                "Información muy importante",
+                                "12-dic"),
                             mailContainer("assets/img/myrkur.jpg", "EXTERNAL",
-                                "Información muy importante"),
-                            mailContainer("assets/img/lindseystirling.jpg",
-                                "EXTERNAL", "Información muy importante"),
+                                "Información muy importante", "12-dic"),
+                            mailContainer(
+                                "assets/img/lindseystirling.jpg",
+                                "EXTERNAL",
+                                "Información muy importante",
+                                "12-dic"),
                           ],
                         ),
                       ),
@@ -74,8 +85,8 @@ class _SearchBar extends State<SearchBar> {
               ),
               Positioned(
                 top: 50,
-                right: 16,
-                left: 16,
+                right: 5,
+                left: 5,
                 child: Container(
                   child: Card(
                     elevation: 3,
@@ -116,7 +127,7 @@ class _SearchBar extends State<SearchBar> {
                           ),
                           CircleAvatar(
                             radius: 16,
-                            backgroundColor: Colors.green,
+                            backgroundColor: Color(0xFF0760b2),
                             child: Text(
                               "M",
                               style: GoogleFonts.lato(

@@ -6,22 +6,22 @@ import 'package:mail_module/body/button_red.dart';
 
 class mailContainer extends StatelessWidget {
   String photoPath;
-  String name, details;
+  String name, details, date;
 
-  mailContainer(this.photoPath, this.name, this.details);
+  mailContainer(this.photoPath, this.name, this.details, this.date);
 
   Widget build(BuildContext context) {
     final artCont = Card(
       margin: const EdgeInsets.only(
-        top: 10,
+        top: 3,
       ),
       child: Column(mainAxisSize: MainAxisSize.max, children: <Widget>[
         Row(
           children: [
             Photo(photoPath),
-            Information(name, details),
-            Button(),
-            ButtonRed()
+            Information(name, details, date),
+            //Button(),
+            //ButtonRed()
           ],
         )
       ]),

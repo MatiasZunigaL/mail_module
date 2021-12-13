@@ -8,8 +8,8 @@ class Photo extends StatelessWidget {
   Widget build(BuildContext context) {
     final photo = Container(
       margin: EdgeInsets.only(top: 10.0, left: 10, bottom: 10),
-      height: 60.0,
-      width: 60.0,
+      height: 50.0,
+      width: 50.0,
       decoration: BoxDecoration(
           shape: BoxShape.circle,
           image:
