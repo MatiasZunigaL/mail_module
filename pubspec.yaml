@@ -29,6 +29,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_snake_navigationbar: ^0.4.0+1
   #icons
   material_design_icons_flutter: 5.0.5955-rc.1
   flutter_feather_icons: ^2.0.0
@@ -39,6 +40,8 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  floating_bottom_navigation_bar: ^1.5.2
+  sliding_clipped_nav_bar: ^2.0.1
 
 dev_dependencies:
   flutter_test:

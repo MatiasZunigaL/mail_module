@@ -110,19 +110,19 @@ class _SearchBar extends State<SearchBar> {
                             flex: 1,
                             child: Padding(
                               padding: FxSpacing.fromLTRB(16, 0, 8, 0),
-                              child: Container(
-                                child: TextField(
-                                  decoration: InputDecoration(
-                                      hintText: "Buscar correo...",
-                                      border: InputBorder.none,
-                                      focusedBorder: InputBorder.none,
-                                      enabledBorder: InputBorder.none,
-                                      disabledBorder: InputBorder.none,
-                                      errorBorder: InputBorder.none,
-                                      focusedErrorBorder: InputBorder.none,
-                                      isDense: true),
-                                ),
+                              //child: Container(
+                              child: const TextField(
+                                decoration: InputDecoration(
+                                    hintText: "Buscar correo...",
+                                    border: InputBorder.none,
+                                    focusedBorder: InputBorder.none,
+                                    enabledBorder: InputBorder.none,
+                                    disabledBorder: InputBorder.none,
+                                    errorBorder: InputBorder.none,
+                                    focusedErrorBorder: InputBorder.none,
+                                    isDense: true),
                               ),
+                              //  ),
                             ),
                           ),
                           CircleAvatar(
