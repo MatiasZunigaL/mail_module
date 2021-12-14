@@ -1,6 +1,6 @@
 # mail_module
 
-A new Flutter project.
+Mail_module for an aplication.
 
 ## Getting Started
 
